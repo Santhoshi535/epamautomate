@@ -43,11 +43,11 @@ Gherkin Styled BDD language
 
 # Test Automation Framework Team
 
-## Venkatesh   - [Email](venkateshsalagrama@gmail.com) - [linkedin](https://www.linkedin.com/in/vsalagrama/)
-## Santhoshi   - [Email]() - [linkedin]()
-## Raviteja    - [Email]() - [linkedin]()
-## Sridhanya   - [Email]() - [linkedin]()
-## Prasadababu - [Email]() - [linkedin]()
+## Venkatesh   - [Git Username](https://github.com/vsalagrama) - [Email](mailto:venkateshsalagrama@gmail.com) - [linkedin](https://www.linkedin.com/in/vsalagrama/)
+## Santhoshi   - [Git Username](https://github.com/Santhoshi535) - [Email](mailto:Santhoshi.santhu69@gmail.com) - [linkedin](https://www.linkedin.com/in/santhoshi-gulivindala-6b1b7891)
+## Raviteja    - [Git Username](https://github.com/) - [Email]() - [linkedin]()
+## Sridhanya   - [Git Username](https://github.com/) - [Email]() - [linkedin]()
+## Prasadababu - [Git Username](https://github.com/PrasadaBabuN) - [Email](mailto:prasadababunadimpalli@gmail.com) - [linkedin](https://www.linkedin.com/in/nadimpalli-prasada-babu-220093189)
 
 @Santhoshi535 - Please update the email/linkedin urls
 
