@@ -1,5 +1,7 @@
 package com.crm.qa.testcases;
 
+import java.net.MalformedURLException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,7 +29,7 @@ public class HomePageTest extends TestBase {
 	//after each test case -- close the browser
 	
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialization();
 		testUtil = new TestUtil();
 		contactsPage = new ContactsPage();

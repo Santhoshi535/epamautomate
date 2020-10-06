@@ -2,6 +2,7 @@ package com.crm.qa.testcases;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import com.crm.qa.base.TestBase;
 import org.apache.commons.io.FileUtils;
@@ -20,7 +21,7 @@ public class FreeCrmTest extends TestBase {
 	static JavascriptExecutor js;
 
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		initialization();
 		js = (JavascriptExecutor) driver;
 		driver.get("https://www.freecrm.com/index.html");
