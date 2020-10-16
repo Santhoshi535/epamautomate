@@ -46,7 +46,7 @@ Gherkin Styled BDD language
 ## Venkatesh   - [Git Username](https://github.com/vsalagrama) - [Email](mailto:venkateshsalagrama@gmail.com) - [linkedin](https://www.linkedin.com/in/vsalagrama/)
 ## Santhoshi   - [Git Username](https://github.com/Santhoshi535) - [Email](mailto:Santhoshi.santhu69@gmail.com) - [linkedin](https://www.linkedin.com/in/santhoshi-gulivindala-6b1b7891)
 ## Raviteja    - [Git Username](https://github.com/) - [Email]() - [linkedin]()
-## Sridhanya   - [Git Username](https://github.com/) - [Email]() - [linkedin]()
+## Sridhanya   - [Git Username](https://github.com/) - [Email](mailto:srim1950@gmail) - [linkedin]()
 ## Prasadababu - [Git Username](https://github.com/PrasadaBabuN) - [Email](mailto:prasadababunadimpalli@gmail.com) - [linkedin](https://www.linkedin.com/in/nadimpalli-prasada-babu-220093189)
 
 @Santhoshi535 - Please update the email/linkedin urls
