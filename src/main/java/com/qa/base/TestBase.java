@@ -1,4 +1,4 @@
-package com.crm.qa.base;
+package com.qa.base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,6 +8,8 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import com.qa.util.TestUtil;
+import com.qa.util.WebEventListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,9 +21,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-
-import com.crm.qa.util.TestUtil;
-import com.crm.qa.util.WebEventListener;
 
 public class TestBase {
 
@@ -35,7 +34,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + s + "src" + s + "main" + s
-					+ "java" + s + "com" + s + "crm" + s + "qa" + s + "config" + s + "config.properties");
+					+ "java" + s + "com" + s + "qa" + s + "config" + s + "config.properties");
 			prop.load(ip);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -114,14 +113,13 @@ public class TestBase {
 			driver = new SafariDriver();
 			break;
 		default:
-			System.out.println("Please provide valid browser name or browsername is empty");
+			System.out.println("Please provide valid browser name or browser name is empty");
 		}
 		return driver;
 	}
 
 	public void closeDriver() {
 		driver.close();
-		
 		driver.quit(); // this is exclusively required for Browserstack
 	}
 

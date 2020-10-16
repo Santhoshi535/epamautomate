@@ -1,11 +1,11 @@
-package com.crm.qa.pages;
+package com.qa.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.crm.qa.base.TestBase;
+import com.qa.base.TestBase;
 
 public class LoginPage extends TestBase{
 	
@@ -35,7 +35,7 @@ public class LoginPage extends TestBase{
 		return driver.getTitle();
 	}
 	
-	public boolean validateCRMImage(){
+	public boolean validateImage(){
 		return crmLogo.isDisplayed();
 	}
 	

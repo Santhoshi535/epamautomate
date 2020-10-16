@@ -1,21 +1,20 @@
-package com.crm.qa.testcases;
+package com.qa.testcases;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-import com.crm.qa.base.TestBase;
+import com.qa.base.TestBase;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class FreeCrmTest extends TestBase {
+public class TitleTest extends TestBase {
 
 	static WebDriver driver;
 	static JavascriptExecutor js;
@@ -28,17 +27,17 @@ public class FreeCrmTest extends TestBase {
 	}
 
 	@Test
-	public void freeCrmTitleTest() throws InterruptedException, IOException {
+	public void titleTest() throws InterruptedException, IOException {
 		String title = driver.getTitle();
 		System.out.println("title is: " + title);
 		getRunTimeInfoMessage("info", title);
 
-		if (title.equals("Free CRM software in the cloud powers sales and customer serviceQQQQ")) {
+		if (title.equals("Software in the cloud powers sales and customer serviceQQQQ")) {
 			getRunTimeInfoMessage("info", "title is correct!! YAY!!!");
 			Assert.assertTrue(true);
 		} else {
 			getRunTimeInfoMessage("error", "title is not correct!! BUG BUG BUG!!!");
-			takeScreenshot("freecrmloginpage");
+			takeScreenshot(title);
 			Assert.fail();
 		}
 
@@ -84,7 +83,7 @@ public class FreeCrmTest extends TestBase {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// now copy the screenshot to desired location using copyFile //method
 		FileUtils.copyFile(src, 
-				new File("/Users/NaveenKhunteta/Documents/MyPOMFramework/PageObjectModel/screenshots/" + fileName +".png"));
+				new File(System.getProperty("user.dir")+"/screenshots/" + fileName +".png"));
 
 	}
 

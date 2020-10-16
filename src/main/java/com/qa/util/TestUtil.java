@@ -1,4 +1,4 @@
-package com.crm.qa.util;
+package com.qa.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,14 +14,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.crm.qa.base.TestBase;
+import com.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
 
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
 	public static String fs=File.separator;
-	public static String DATA_SHEET_PATH = "src"+fs+"main"+fs+"java"+fs+"com"+fs+"crm"+fs+"qa"+fs+"testData"+fs+"inputData.xlsx";
+	public static String DATA_SHEET_PATH = "src"+fs+"main"+fs+"java"+fs+"com"+fs+"qa"+fs+"testData"+fs+"inputData.xlsx";
 
 
 	static Workbook book;
