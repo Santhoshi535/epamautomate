@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: sureifylabs/sureify-automation:firstimage
+        environment:
+          TZ: Asia/Kolkatha    
+    steps:
+      - checkout
+      - run:
+          name: Running test suite
+          command: mvn clean test
+      - store_artifacts:
+          path: ./test-output
