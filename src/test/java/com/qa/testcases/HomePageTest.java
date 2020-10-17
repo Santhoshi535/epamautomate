@@ -1,23 +1,17 @@
 package com.qa.testcases;
 
 import java.net.MalformedURLException;
-
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.qa.base.TestBase;
-import com.qa.pages.ContactsPage;
 import com.qa.pages.HomePage;
-import com.qa.pages.LoginPage;
 import com.qa.util.TestUtil;
 
 public class HomePageTest extends TestBase {
-	LoginPage loginPage;
+	
 	HomePage homePage;
 	TestUtil testUtil;
-	ContactsPage contactsPage;
 
 	public HomePageTest() {
 		super();
@@ -32,33 +26,18 @@ public class HomePageTest extends TestBase {
 	public void setUp() throws MalformedURLException {
 		initialization();
 		testUtil = new TestUtil();
-		contactsPage = new ContactsPage();
-		loginPage = new LoginPage();
-		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		homePage = new HomePage();
 	}
 	
 	
 	@Test(priority=1)
 	public void verifyHomePageTitleTest(){
-		String homePageTitle = homePage.verifyHomePageTitle();
-		Assert.assertEquals(homePageTitle, "CRMPRO","Home page title not matched");
-	}
-	
-	@Test(priority=2)
-	public void verifyUserNameTest(){
-		testUtil.switchToFrame();
-		Assert.assertTrue(homePage.verifyCorrectUserName());
-	}
-	
-	@Test(priority=3)
-	public void verifyContactsLinkTest(){
-		testUtil.switchToFrame();
-		contactsPage = homePage.clickOnContactsLink();
+		homePage.findRatio();
 	}
 
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		// driver.quit();
 	}
 
 }

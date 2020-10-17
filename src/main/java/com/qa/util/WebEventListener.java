@@ -72,11 +72,11 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		System.out.println("Trying to find Element By : " + by.toString());
+		// System.out.println("Trying to find Element By : " + by.toString());
 	}
 
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		System.out.println("Found Element By : " + by.toString());
+		// System.out.println("Found Element By : " + by.toString());
 	}
 
 	/*
