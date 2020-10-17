@@ -9,9 +9,7 @@
 
 	<test name="EPAM Test Cases">
 		<classes>
-			<class name="com.qa.testcases.LoginPageTest"/>
 			<class name="com.qa.testcases.HomePageTest"/>
-			<class name="com.qa.testcases.ContactsPageTest"/>
 
 		</classes>
 	</test>

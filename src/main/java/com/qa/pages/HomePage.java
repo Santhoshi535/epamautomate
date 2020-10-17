@@ -6,68 +6,31 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 import com.qa.base.TestBase;
+import com.qa.util.FindRatio;
 
 public class HomePage extends TestBase {
 
-	@FindBy(xpath = "//td[contains(text(),'User: Naveen K')]")
-	@CacheLookup
-	WebElement userNameLabel;
+	@FindBy(xpath = "//div[@class='state-name fadeInUp']")
+	List<WebElement> cState;
 
-	@FindBy(xpath = "//a[contains(text(),'Contacts')]")
-	WebElement contactsLink;
-	
-	@FindBy(xpath = "//a[contains(text(),'New Contact')]")
-	WebElement newContactLink;
-	
+	@FindBy(xpath = "//div[@class='cell statistic']/div[@class='delta is-confirmed']/following-sibling::div")
+	List<WebElement> cConfirmed;
 
-	@FindBy(xpath = "//a[contains(text(),'Deals')]")
-	WebElement dealsLink;
-
-	@FindBy(xpath = "//a[contains(text(),'Tasks')]")
-	WebElement tasksLink;
+	@FindBy(xpath = "//div[@class='cell statistic']/div[@class='delta is-tested']/following-sibling::div")
+	List<WebElement> cTested;
 
 	// Initializing the Page Objects:
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
-	
-	public String verifyHomePageTitle(){
-		return driver.getTitle();
+
+	public void findRatio() {
+		FindRatio ratio= new FindRatio();
+		ratio.flow(cState,cConfirmed,cTested);
 	}
-	
-	
-	public boolean verifyCorrectUserName(){
-		return userNameLabel.isDisplayed();
-	}
-	
-	public ContactsPage clickOnContactsLink(){
-		contactsLink.click();
-		return new ContactsPage();
-	}
-	
-	public DealsPage clickOnDealsLink(){
-		dealsLink.click();
-		return new DealsPage();
-	}
-	
-	public TasksPage clickOnTasksLink(){
-		tasksLink.click();
-		return new TasksPage();
-	}
-	
-	public void clickOnNewContactLink(){
-		Actions action = new Actions(driver);
-		action.moveToElement(contactsLink).build().perform();
-		newContactLink.click();
-		
-	}
-	
-	
-	
-	
-	
-	
 	
 
 }
